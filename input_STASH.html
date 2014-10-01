@@ -1,0 +1,54 @@
+			<!-- ADD DATA -->
+			<div id="add-data-wrapper">
+
+				<h3>Add data</h3>
+				<form id="add-data" action="#">
+
+					<!-- Weigh-In DATE -->
+					<fieldset id="weigh-in-date-wrapper">
+						<fieldset class="checkbox">
+							<legend>Weigh-in Date:</legend>
+							<label><input type="checkbox" id="date-use-current" /><span>Use Current Date</span></label>
+							<p class="hint">(deselect to specify date)</p>
+						</fieldset>
+						<fieldset class="text-input inline disabled" id="weigh-in-date">
+							<label><span>Weigh-In Date:</span><input type="date" class="datepicker" id="new-date" /></label>
+						</fieldset>
+					</fieldset><!-- END div id="weigh-in-date-wrapper" -->
+
+					<!-- Weigh-In WEIGHT -->
+					<fieldset id="weigh-in-weight-wrapper">
+						<label>
+							<span>Enter weight:</span>
+							<input type="number" id="weigh-in-weight" min="144" max="180" value="165" step="0.2" />
+						</label>
+					</fieldset><!-- END div id="weigh-in-weight-wrapper" -->
+
+					<button type="submit" id="submit-new-data">add new data</button>
+
+				</form><!-- END form  id="add-data" -->
+			</div><!-- END div class="add-data-wrapper" -->
+
+
+			<!-- LOAD DATA (filters) -->
+			<div id="load-data-wrapper">
+				<fieldset class="disabled" id="set-date-range">
+					<legend>Set Date Range</legend>
+
+					<fieldset class="inline-label-input">
+						<label>From: <input type="date" id="date-start" class="datepicker" /></label>
+					</fieldset>
+					<fieldset class="inline-label-input">
+						<label>To: <input type="date" id="date-end" class="datepicker" /></label>
+					</fieldset>
+
+					<fieldset class="checkbox">
+						<label><input type="checkbox" id="show-all"  /><span>Show all</span></label>
+						<p class="hint">(deselect to specify date range)</p>
+					</fieldset>
+				</fieldset><!--	END set-date-range	-->
+
+					<button type="submit" id="data-loader">load data</button>
+				</form>
+			</div><!-- END div id="load-data-wrapper" -->
+

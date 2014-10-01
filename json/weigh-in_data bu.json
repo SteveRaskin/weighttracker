@@ -1,0 +1,46 @@
+{
+	"user":	{
+		"userName": "Steve",
+		"weigh-in data": {
+			"2014.08.15": "166.0",
+			"2014.08.16": "165.8",
+			"2014.08.17": "165.4",
+			"2014.08.18": "165.8",
+			"2014.08.19": "165.4",
+			"2014.08.20": "165.6",
+			"2014.08.21": "166.4",
+			"2014.08.23": "166.0"
+			},
+		"goal weight": "156",
+		"peak weight": "",
+		"low weight": ""
+	},
+	"user":	{
+		"userName": "Herbie",
+		"weigh-in data": {
+			"Date 01": "120.0",
+			"Date 02": "120.0",
+			"Date 03": "120.0",
+			"Date 04": "120.0",
+			"Date 05": "120.0",
+			"Date 06": "120.0"
+			},
+		"goal weight": "",
+		"peak weight": "",
+		"low weight": ""
+	},
+	"user":	{
+		"userName": "Wayne",
+		"weigh-in data": {
+			"Date 01": "120.0",
+			"Date 02": "120.0",
+			"Date 03": "120.0",
+			"Date 04": "120.0",
+			"Date 05": "120.0",
+			"Date 06": "120.0"
+			},
+		"goal weight": "",
+		"peak weight": "",
+		"low weight": ""
+	}
+}

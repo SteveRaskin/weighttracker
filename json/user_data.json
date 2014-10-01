@@ -1,0 +1,28 @@
+{
+	"Users": [
+		{
+			"userName": "Herbie",
+			"goal weight": "240"
+		},
+		{
+			"userName": "Wayne",
+			"goal weight": "225"
+		},
+		{
+			"userName": "Freddie",
+			"goal weight": "210"
+		},
+		{
+			"userName": "Ron",
+			"goal weight": "195"
+		},
+		{
+			"userName": "Tony",
+			"goal weight": "180"
+		},
+		{
+			"userName": "Shecky",
+			"goal weight": "156"
+		}
+	]
+}

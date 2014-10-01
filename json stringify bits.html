@@ -1,0 +1,146 @@
+<!--
+	http://ajaxify.com/run/json/
+	http://ajaxpatterns.org/JSON_Message
+	maybe this will help clarify though it looks ancient, e.g., eval
+-->
+
+
+<div>
+	<label>House Number:</label>
+	<input id="houseNumber" value="" />
+</div>
+
+
+<div>
+	<label>Street:</label>
+	<input id="street" value="" />
+</div>
+
+<div>
+	<label>City: </label>
+	<input id="city" value="" />
+</div>
+
+<div>
+	<label>Zipcode/Postcode:</label>
+	<input id="postcode" value="" />
+</div>
+
+<div>
+	<label>Country:</label>
+	<input id="country" value="" />
+</div>
+
+<div>
+	<label>Comment 1:</label>
+	<input id="comment1" value="" />
+</div>
+
+<div>
+	<label>Comment 2:</label>
+	<input id="comment2" value="" />
+</div>
+
+<div>
+	<label>Comment 3:</label>
+	<input id="comment3" value="" />
+</div>
+
+Converted to JSON using JSON.stringify(parseAddressForm(val))
+{
+	"houseNumber":"123",
+	"street":"main st",
+	"city":"smallville",
+	"postcode":"10001",
+	"country":"USA",
+	"comments":["keep walking","mutherfucker",""]
+}
+
+Converted Back to Javascript using eval("("+json+")"+)
+[houseNumber]: [123], [street]: [main st], [city]: [smallville], [postcode]: [10001], [country]: [USA], [comments]: [keep walking,mutherfucker,]
+
+(Type: object)
+
+<script>
+
+	var nameJSON = JSON.stringify($("name").value);
+	convert(nameJSON, $("nameJSON"), $("nameAgain"));
+
+	var age = parseInt($("age").value);
+	var ageJSON = JSON.stringify(parseInt(age));
+	convert(ageJSON, $("ageJSON"), $("ageAgain"));
+
+
+	var comments = new Array();
+	  for (i=1; i<=3; i++) {
+		 var comment = $("comment"+i).value;
+		 if (!comment.isWhitespace) {
+			comments.push(comment);
+		 }
+	  }
+
+
+	// input data as an object literal:
+	var address = {
+	//	houseNumber: $("houseNumber").value,
+	// street: $("street").value,
+	// city: $("city").value,
+	// postcode: $("postcode").value,
+	// country: $("country").value,
+	// comments: comments
+	
+		// so, define vars per the input values, e.g.:
+		// var housenumber = document.getElementById("housenumber");
+		// housenumber = housenumber.value;
+		houseNumber: houseNumber.value,
+		street: street.value,
+		city: city.value,
+		postcode: postcode.value,
+		country: country.value,
+		comments: comments
+		}
+
+	var addressJSON = JSON.stringify(address);
+		convert(addressJSON, $("addressJSON"), $("addressAgain"));
+
+		}
+</script>
+
+
+<!--	
+	Pass messages between server and browser in JavaScript Object Notation (JSON) format. JSON is a standard serialization format, created in 2002 as a cleaner and lighter alternative to XML. As with XML, the object can range in complexity from a simple string to a deep hierarchical structure. Also like XML, JSON is language-neutral, meaning that you could marshall a C++ object into JSON notation, and unmarshall it to form an object in Perl. But in practice, JSON is particularly suited to browser-server communication because it's a format based on JavaScript.
+
+	In fact, a JSON Message is JavaScript. This is a valid JSON Message:
+
+	 "Homer J."
+
+	You can test browser-based JSON conversion on the Basic JSON Demo. As you'll see there, the JSON message "Homer J." maps to the JavaScript string,
+	Homer J..
+
+	Here's a more complex example (as on the demo, reformatted):
+
+	{"houseNumber":"742", "street":"Evergreen Terrace", "city":"Springfield", "postcode":"49007", "country":"USA", "comments": ["Deliveries
+	accepted.","Familiar address, huh?",""]
+	 }
+	 }
+	As you can see, this JSON message is just a literal JavaScript object. You convert it like this: <snip eval stuff>
+
+
+
+
+
+	... The browser can pick up a JSON string using an XMLHttpRequest Call, and simply run the standard eval function.
+
+	However, there is actually a JavaScript JSON library which adds two important capabilities: (a) a safer string-to-object conversion, and (b) an
+	object-to-string conversion.
+
+	The safe string-to-object conversion is important if you don't trust the message. It's dangerous to run eval on an arbitrary message, since you
+	might end up running malicious JavaScript code. Instead, there's an explicit method which will only parse the string and not actually run it:
+
+	 var name = text.parseJSON();
+
+	If you need to upload something to the server, you'll need to convert a JavaScript object to JSON ... [ now here I get confused as the articles
+	date back to 2005; is there a specific plug or library required to handle json on the server or I presume php has that shit covered natively ]
+
+-->
+
